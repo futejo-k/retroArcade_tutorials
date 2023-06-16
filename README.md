@@ -11,9 +11,8 @@ Kódy jsou psány tak jak jsou v blokové verzi
 - set hráč ay to 500 (otestujte si, možná změna; ay znamená vertikální zrychlení, jak moc zrychlí hráč)
 - camera follow sprite hráč (hráč bude středem pozornosti, hýbe se s ním kamera)
 
-**Blok kódu po kroku 1:**
-
-![on start po kroku 1](C:\Users\Caedis\Desktop\Retro_Arcade_Tutorials\DonkeyKong_img\OnStart_Krok1.png)
+### Blok kódu po kroku 1:
+![on start po kroku 1](DonkeyKong_img/OnStart_Krok1.png)
 
 ## Krok 2: Vytvoření světa
 ### on start:
@@ -21,9 +20,8 @@ Kódy jsou psány tak jak jsou v blokové verzi
 - set background color to black (vyberte si vlastní barvu, originální donkey kong měl černé pozadí, pokud jste si vybrali jako pozadí obrázek, je tento krok zbytečný)
 - set tilemap to ... (vytvořte si vlastní level, budete potřebovat blok platformy a blok žebříku, platformy musí být nastaveny jako zdi, žebřík ne)
 
-**Blok kódu po kroku 2:**
-
-![on start po kroku 2](C:\Users\Caedis\Desktop\Retro_Arcade_Tutorials\DonkeyKong_img\OnStart_Krok2.png)
+### Blok kódu po kroku 2:
+![on start po kroku 2](DonkeyKong_img/OnStart_Krok2.png)
 
 ## Krok 3: Pohyb hráče
 ### on left button pressed:
@@ -48,11 +46,9 @@ if (is hráč hitting wall bottom)
 }
 ```
 
-**Bloky kódu po kroku 3:**
-
-![on ... button po kroku 3](C:\Users\Caedis\Desktop\Retro_Arcade_Tutorials\DonkeyKong_img\OnButton_Krok3.png)
-
-![on up button po kroku 3](C:\Users\Caedis\Desktop\Retro_Arcade_Tutorials\DonkeyKong_img\OnUpButton_Krok3.png)
+### Bloky kódu po kroku 3:
+![on ... button po kroku 3](DonkeyKong_img/OnButton_Krok3.png)
+![on up button po kroku 3](DonkeyKong_img/OnUpButton_Krok3.png)
 
 ## Krok 4: Žebřík
 ### on sprite of kind Player overlaps (obrázek žebříku) at location:
@@ -65,6 +61,5 @@ if (is up button pressed then)
 ```
 
 
-**Blok kódu po kroku 4:**
-
-![on sprite po kroku 4](C:\Users\Caedis\Desktop\Retro_Arcade_Tutorials\DonkeyKong_img\OnSpriteOverlapsZebrik_Krok4.png)
+### Blok kódu po kroku 4:
+![on sprite po kroku 4](DonkeyKong_img/OnSpriteOverlapsZebrik_Krok4.png)
