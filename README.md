@@ -2,7 +2,7 @@
 Kódy jsou psány tak jak jsou v blokové verzi
 
 # Donkey Kong
-Původní ![hra](https://en.wikipedia.org/wiki/Donkey_Kong) je z roku 1981 a byla vytvořená developerem ![Shigeru Miyamotem](https://cs.wikipedia.org/wiki/%C5%A0igeru_Mijamoto). Hru momentálně vlastní společnost ![Nintendo](https://cs.wikipedia.org/wiki/Nintendo).
+Původní [hra](https://en.wikipedia.org/wiki/Donkey_Kong) je z roku 1981 a byla vytvořená developerem [Shigeru Miyamotem](https://cs.wikipedia.org/wiki/%C5%A0igeru_Mijamoto). Hru momentálně vlastní společnost [Nintendo](https://cs.wikipedia.org/wiki/Nintendo).
 
 ## Krok 1: Vytvoření hráče
 ### on start:
@@ -125,6 +125,6 @@ if (is up button pressed then)
 ![On sprite of kind Player overlaps Barel po kroku 7](DonkeyKong_img/OnPlayerOverlapsBarel_Krok7.png)
 
 ## Finální kód:
-Mojí hru najdete ![tady](https://arcade.makecode.com/S91315-70078-54716-48617)
+Mojí hru najdete [tady](https://arcade.makecode.com/S91315-70078-54716-48617)
 
 ![Celý kód](DonkeyKong_img/Final.png)
