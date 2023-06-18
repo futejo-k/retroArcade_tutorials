@@ -125,6 +125,6 @@ if (is up button pressed then)
 ![On sprite of kind Player overlaps Barel po kroku 7](DonkeyKong_img/OnPlayerOverlapsBarel_Krok7.png)
 
 ## Finální kód:
-Mojí hru najdete ![tady](https://makecode.com/_HTCdgT2rmPEC)
+Mojí hru najdete ![tady]([https://makecode.com/_HTCdgT2rmPEC](https://arcade.makecode.com/S91315-70078-54716-48617))
 
 ![Celý kód](DonkeyKong_img/Final.png)
