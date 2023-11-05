@@ -128,3 +128,128 @@ if (is up button pressed then)
 Mojí hru najdete [tady](https://arcade.makecode.com/S91315-70078-54716-48617)
 
 ![Celý kód](DonkeyKong_img/Final.png)
+
+
+***
+
+
+# Flappy bird
+## Krok 1: Vytvoření hráče a pozadí
+### on start:
+- set background color to ...
+- set score to 0
+- start screen ... effect
+- set Hrac to sprite ... of kind Player
+- set Hrac ay(acceleration y) to 300
+
+### on any button pressed
+- set Hrac vy (velocity y) to -100
+- Hrac start ... effect
+
+### Bloky kódu po kroku 1:
+![On Start po kroku 1](FlappyBird_img/krok1_onstart.png)
+![On any button pressed](FlappyBird_img/krok1_anybutton.png)
+
+
+## Krok 2: Generace překážek
+### on game update every 1500 ms
+```
+set Mezera to pick random 0 to 3
+if (Mezera = 0) then
+{
+	set topImage to ... //1 špalek ze shora
+	set bottomImage to ... //4 špalky ze zdola
+}
+else if (Mezera = 1) then
+{
+	set topImage to ... //2
+	set bottomImage to ... //3
+}
+else if (Mezera = 2) then
+{
+	set topImage to ... //3
+	set bottomImage to ... //2
+}
+else
+{
+	set topImage to ... //4
+	set bottomImage to ... //1
+}
+```
+
+### Blok kódu po kroku 2:
+![On game update every 1500ms po kroku 2](FlappyBird_img/krok2_ongame1500.png)
+
+## Krok 3: Mezery u překážek
+### on game update 1500ms (pod krok 2)
+- set gapImage to create image width 3 height screen height
+- fill gapImage with ...
+- set gapSprite to sprite gapImage of kind Mezera
+- set gapSprite auto destroy ON
+- set gapSprite invisble ON
+- set gapSprite left to screen width
+- set gapSprite vx (velocity x) to -45
+- set Stena to projectile topImage from side vx: -45 vy: 0
+- set Stena top to 0
+- set Stena to projectile bottomImage from side vx: -45 vy: 0
+- set Stena bottom to screen height
+
+### Blok kódu po kroku 3:
+![On game update every 1500ms po kroku 3](FlappyBird_img/krok3_ongame1500.png)
+
+## Krok 4: Přičítání bodů
+### on sprite of kind Player overlaps otherSprite of kind Mezera
+```
+if ((otherSprite.right - sprite.left) < 2) then
+{
+	change score by 1
+}
+```
+
+### Blok kódu po kroku 4
+![sprite Player overlaps otherSprite Mezera po kroku 4](FlappyBird_img/krok4_playeroverlapsmezera.png)
+
+## Krok 5: Prohra
+### on sprite of kind Player overlaps otherSprite of kind Projectile
+- game over LOSE
+
+### on game update
+```
+if ((Hrac.bottom > 120) or (Hrac.top) < 0)
+{
+	game over LOSE
+}
+```
+
+### Bloky kódu po kroku 5:
+![sprite Player overlaps otherSprite Projectile po kroku 5](FlappyBird_img/krok5_playeroverlapsprojectile.png)
+![on game update po kroku 5](FlappyBird_img/krok5_ongame.png)
+
+## Hotovo
+
+## Krok 6: Animace
+Rozklikněte sekci Extensions a v ní klikněte na Animation, do již existujících Advanced bloků Animation se nám přidá jestě víc bloků pro animaci.
+
+### on start
+- set anim to create animation of Walking with interval 25 ms
+- add frame ... to anim
+- add frame ... to anim
+-  -||- (dokud nebudete mít všechny bloky, které chcete mít v animaci)
+-  attach animation anim to sprite Hrac
+
+### on game update
+```
+if (Hrac.vy > 0)
+{
+	activate animation Walking on Hrac
+}
+```
+
+### on any button pressed
+mezi set Hrac vy a Hrac start effect
+- activate animation Walking on Hrac
+
+### Bloky kódu po kroku 6:
+![any button po kroku 6](FlappyBird_img/krok6_anybutton.png)
+![On Start po kroku 6](FlappyBird_img/krok6_onstart.png)
+![on game update po kroku 6](FlappyBird_img/krok6_ongame.png)
